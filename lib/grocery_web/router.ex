@@ -17,7 +17,7 @@ defmodule GroceryWeb.Router do
   scope "/", GroceryWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    get "/", FruitController, :index
     get "/fruits", FruitController, :index
   end
 
