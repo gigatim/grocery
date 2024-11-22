@@ -61,6 +61,15 @@ config :logger, :console,
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 
+# Quantum Schedule
+config :grocery, Grocery.Scheduler,
+  jobs: [
+    # Every minute
+    {"* * * * *",      {Grocery.Restocker, :fruit, ["apple"]}},
+    # Every 15 minutes
+    {"*/5 * * * *",   {Grocery.Restocker, :fruit, ["orange"]}},
+  ]
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{config_env()}.exs"
