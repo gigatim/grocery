@@ -17,7 +17,9 @@ defmodule Grocery.Application do
       # Start a worker by calling: Grocery.Worker.start_link(arg)
       # {Grocery.Worker, arg},
       # Start to serve requests, typically the last entry
-      GroceryWeb.Endpoint
+      GroceryWeb.Endpoint,
+      # Quantum scheduler used to schedule recurring tasks
+      Grocery.Scheduler,
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
