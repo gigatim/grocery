@@ -1,18 +1,16 @@
 # Grocery
 
-To start your Phoenix server:
+This is an example application to use with [Gigalixir][gigalixir].
 
-  * Run `mix setup` to install and setup dependencies
-  * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
+Grocery is a simplified [Elixir][elixir] [Phoenix][phoenix] project utilizing [Quantum][quantum] for scheduling tasks.
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+In this application the Quantum schedule is defined in the [/config/config.exs](config/config.exs) file.
+The `Grocery.Restocker#fruit/1` function is scheduled to increment the orange count by 1 every 5 minutes, and the apple count by 1 every minute.
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+The default route `/` displays the current fruit counts.
 
-## Learn more
 
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+[elixir]: https://elixir-lang.org/
+[gigalixir]: https://www.gigalixir.com/
+[phoenix]: https://www.phoenixframework.org/
+[quantum]: https://hexdocs.pm/quantum/readme.html
